@@ -1,20 +1,17 @@
 ﻿using Newtonsoft.Json;
 
-namespace Library;
+namespace MyClassLib;
 
-using System;
 
 public class Money
 {
     public decimal Amount { get; }
     public string Currency { get; }
-
     public Money(decimal amount, string currency)
     {
         Amount = amount;
         Currency = currency;
     }
-
     public static Money operator +(Money money1, Money money2)
     {
         if (money1.Currency == money2.Currency)
@@ -24,11 +21,10 @@ public class Money
         else
         {
             // Используем CurrencyConverter для конвертации
-            decimal convertedAmount = CurrencyConverter.Convert(money2, money1.Currency).Result;
+            decimal convertedAmount = Convert(money2, money1.Currency).Result;
             return new Money(money1.Amount + convertedAmount, money1.Currency);
         }
     }
-
     public static bool operator ==(Money money1, Money money2)
     {
         if (ReferenceEquals(money1, money2))
@@ -40,13 +36,12 @@ public class Money
         if (money1.Currency != money2.Currency)
         {
             // Используем CurrencyConverter для сравнения в одной валюте
-            decimal convertedAmount = CurrencyConverter.Convert(money2, money1.Currency).Result;
+            decimal convertedAmount = Convert(money2, money1.Currency).Result;
             return money1.Amount == convertedAmount;
         }
 
         return money1.Amount == money2.Amount;
     }
-
     public static bool operator !=(Money money1, Money money2)
     {
         return !(money1 == money2);
@@ -55,10 +50,6 @@ public class Money
     {
         return "Ammount: "+Amount + "Currency: " + Currency;
     }
-}
-
-class CurrencyConverter
-{
     public static async Task<decimal> Convert(Money money, string targetCurrency)
     {
         HttpClient httpClient = new();
@@ -72,9 +63,8 @@ class CurrencyConverter
         
         return (rate*money.Amount);
     }
-
-   
 }
+
 
 class ConversionResponse
 {

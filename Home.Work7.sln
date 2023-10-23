@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home.Work7", "Home.Work7\Home.Work7.csproj", "{82944C2F-8DD6-48D6-8B50-227581725005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day7", "Day7\Day7.csproj", "{CC3EFCAD-4ED1-4221-AA3E-8B642189C0CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClassLib", "MyClassLib\MyClassLib.csproj", "{CC80BE70-F7D1-4FA7-B757-2812C7412359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{82944C2F-8DD6-48D6-8B50-227581725005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82944C2F-8DD6-48D6-8B50-227581725005}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82944C2F-8DD6-48D6-8B50-227581725005}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82944C2F-8DD6-48D6-8B50-227581725005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3EFCAD-4ED1-4221-AA3E-8B642189C0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3EFCAD-4ED1-4221-AA3E-8B642189C0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3EFCAD-4ED1-4221-AA3E-8B642189C0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3EFCAD-4ED1-4221-AA3E-8B642189C0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC80BE70-F7D1-4FA7-B757-2812C7412359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC80BE70-F7D1-4FA7-B757-2812C7412359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC80BE70-F7D1-4FA7-B757-2812C7412359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC80BE70-F7D1-4FA7-B757-2812C7412359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
